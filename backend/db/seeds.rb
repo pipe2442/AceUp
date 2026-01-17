@@ -1,9 +1,36 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+Invoice.destroy_all
+
+Invoice.create!([
+  {
+    invoice_number: "INV-001",
+    payment_status: "Paid",
+    payment_method: "Credit Card",
+    total_amount: 250.00
+  },
+  {
+    invoice_number: "INV-002",
+    payment_status: "Pending",
+    payment_method: "PayPal",
+    total_amount: 125.50
+  },
+  {
+    invoice_number: "INV-003",
+    payment_status: "Unpaid",
+    payment_method: "Bank Transfer",
+    total_amount: 450.00
+  },
+  {
+    invoice_number: "INV-004",
+    payment_status: "Paid",
+    payment_method: "Credit Card",
+    total_amount: 50.25
+  },
+  {
+    invoice_number: "INV-005",
+    payment_status: "Pending",
+    payment_method: "PayPal",
+    total_amount: 890.00
+  }
+])
+
+puts "Seeded #{Invoice.count} invoices."

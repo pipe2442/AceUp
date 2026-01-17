@@ -70,6 +70,14 @@ const Dashboard = () => {
         </div>
         <OrderDialog onSave={handleAddOrder} />
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <p className="text-sm font-medium text-slate-500 uppercase tracking-wider">Total Invoices</p>
+          <p className="text-4xl font-bold text-slate-900 mt-2">{orders.length}</p>
+        </div>
+      </div>
+
       <OrdersTable 
         orders={formattedOrders} 
         onEditOrder={handleUpdateOrder} 
