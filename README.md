@@ -1,5 +1,14 @@
 # Aceup Tech Assessment
 
+This is my solution for the Aceup tech assesment for the FullStack position.
+
+Just be sure to build, initialize, and migrate the database before testing the project.
+```
+make build
+make db.init
+make db.migrate
+```
+
 This repository contains two projects:
 - **frontend/**: React 19 + Vite application
 - **backend/**: Ruby on Rails 7.2 API-only application (Ruby 3.2)
