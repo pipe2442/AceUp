@@ -1,18 +1,15 @@
 class InvoicesController < ApplicationController
   before_action :set_invoice, only: [ :show, :update, :destroy ]
 
-  # GET /invoices
   def index
     @invoices = Invoice.all.order(created_at: :desc)
     render json: @invoices
   end
 
-  # GET /invoices/1
   def show
     render json: @invoice
   end
 
-  # POST /invoices
   def create
     result = InvoiceService.create_invoice(invoice_params)
 
@@ -23,7 +20,6 @@ class InvoicesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /invoices/1
   def update
     result = InvoiceService.update_invoice(@invoice, invoice_params)
 
@@ -34,7 +30,6 @@ class InvoicesController < ApplicationController
     end
   end
 
-  # DELETE /invoices/1
   def destroy
     result = InvoiceService.delete_invoice(@invoice)
 

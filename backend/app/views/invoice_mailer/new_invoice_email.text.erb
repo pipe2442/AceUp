@@ -1,0 +1,14 @@
+New Invoice Created
+===================
+
+Hello Admin,
+
+A new invoice has been registered in the system:
+
+Invoice Number: <%= @invoice.invoice_number %>
+Payment Method: <%= @invoice.payment_method %>
+Status: <%= @invoice.payment_status %>
+Total Amount: $<%= number_with_precision(@invoice.total_amount, precision: 2) %>
+
+Best regards,
+AceUp Team

@@ -1,5 +1,5 @@
 build:
-	docker-compose -f docker-compose.yml up -d db redis backend frontend
+	docker-compose -f docker-compose.yml up -d db redis backend frontend sidekiq
 
 bundle.update:
 	docker-compose run --rm --no-deps backend bundle update
