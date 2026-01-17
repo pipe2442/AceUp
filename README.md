@@ -9,6 +9,9 @@ make db.init
 make db.migrate
 ```
 
+<img width="1229" height="858" alt="Screenshot 2026-01-16 at 11 00 49 PM" src="https://github.com/user-attachments/assets/9b788b96-efab-499d-b6fe-76bfeb5b4f9f" />
+
+
 This repository contains two projects:
 - **frontend/**: React 19 + Vite application
 - **backend/**: Ruby on Rails 7.2 API-only application (Ruby 3.2)
